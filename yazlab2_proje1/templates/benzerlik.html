@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proje</title>
+</head>
+<body>
+    <p>benzerlik skoru hesaplama...</p>
+    <form action="/3" method="post">  
+        <input type="text" name="text1">
+        <input type="text" name="text2">
+        <button type="submit"> Benzerlik Skoru Bul </button>
+    </form>
+    <p>1. URL'deki anahtar kelime ve frekansları:</p>
+    {% for anahtar,deger in anahtarlar %}
+        <p>{{anahtar,deger}}</p>
+    {% endfor %}
+    {% if sonuc %}
+        <br><p>(yüzde) benzerlik skoru:</p>
+        <p>{{sonuc}}</p><br>
+    {% else %}
+    {% endif %} 
+    {% if ikidegecenAnahtarlar %}
+         <br><p>2. URL'de geçen anahtar kelimeler:</p>
+        <p>{{ikidegecenAnahtarlar}}</p><br>
+    {% else %}
+    {% endif %}  
+</body>
+</html>
